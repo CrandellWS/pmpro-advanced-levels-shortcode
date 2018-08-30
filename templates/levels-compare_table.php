@@ -377,10 +377,6 @@ global $pmproal_link_arguments;
 					foreach($compareitems as $compareitem)
 					{
 						$compareitem_values = explode(",", $compareitem);
-						if($count >= 0 && !empty($numeric_levels_array[$count]))
-							$compare_level = $numeric_levels_array[$count];
-						else
-							$compare_level = NULL;
 						if($compareitem_values[$count] != '0')
 						{ 
 							if($compareitem_values[$count] == '1') 
