@@ -154,9 +154,7 @@ global $pmproal_link_arguments;
 						else
 							$level = NULL;
 						$count++;
-						?>
-						<td class="<?php if(!empty($level) && !empty($current_user->membership_level) && $current_user->membership_level->ID == $level->id) { echo 'pmpro_level-current '; } if(!empty($level) && $highlight == $level->id) { echo 'pmpro_level-highlight '; } ?>">
-							<?php 
+						echo '<td class="'. ((!empty($level) && !empty($current_user->membership_level) && $current_user->membership_level->ID == $level->id) ? 'pmpro_level-current ':'') . ((!empty($level) && $highlight == $level->id) ? 'pmpro_level-highlight ':'') . '">'; 
 								if($compareitem_value == '1') { echo '<span class="pmpro_level-compare-true"></span>'; } 
 								elseif($compareitem_value == '0') { echo '<span class="pmpro_level-compare-false"></span>'; } 
 								else { echo $compareitem_value; } 
